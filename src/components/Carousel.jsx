@@ -13,11 +13,23 @@ function Carousel() {
 				className="carousel"
 				style={{ backgroundImage: `url(${images[currentImg].src})` }}
 			>
-				<div className="left-col">
+				<div
+					className="left-col"
+					onClick={() => {
+						currentImg > 0 && setCurrentImg(currentImg - 1);
+					}}
+				>
 					<FaChevronCircleLeft style={{ fontSize: '40px' }} />
 				</div>
-				<div className="center-col"></div>
-				<div className="right-col">
+				<div className="center-col">
+					<h1>{images[currentImg].title}</h1>
+				</div>
+				<div
+					className="right-col"
+					onClick={() => {
+						currentImg < images.length - 1 && setCurrentImg(currentImg + 1);
+					}}
+				>
 					<FaChevronCircleRight style={{ fontSize: '40px' }} />
 				</div>
 			</div>

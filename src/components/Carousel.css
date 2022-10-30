@@ -1,11 +1,11 @@
 .container {
-	margin: 0 auto;
+	margin: 5rem auto 0;
 	width: 60%;
 	height: 600px;
 	background-color: black;
 }
 
-.carousel {
+.container .carousel {
 	display: flex;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -27,10 +27,18 @@
 .center-col {
 	width: 80%;
 	height: 100%;
-	display: grid;
-	place-items: center;
-	text-align: justify;
-	text-align-last: center;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+h1 {
+	min-width: 100px;
+	color: white;
+	background: hsla(0, 8%, 5%, 0.8);
+	padding: 1rem;
+	border-radius: 8px;
+	text-align: center;
 }
 
 .right-col {
